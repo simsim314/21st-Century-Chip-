@@ -1,4 +1,4 @@
-# 21st-Century-Chip-
+# 21st-Century-Chip
 A modern computational architecture for the 21st century. 
 
 An introduction post

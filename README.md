@@ -9,3 +9,11 @@ The major idea is to learn to think about circuitry in language which can transl
 The architecture will use hive mind to compete over usability of shared components by the community, and thus the community will create the best and most effitient circuitry. We will provide a platform to share, contribute and make money out of making good functions and code, and documentation that will be shared in some wiki space, and people will know to search, find, use, and develop the next level of functions and classes. The hardware will immediatelly implement the most important and usable software, and the system is working like science - the more people need it the 
 
 We start from address tree as initial point to provide some sort of hierarchy and generality in the design. Eventually the chip itself will be modified by the community as well. See project hives. 
+
+--------------
+
+This was written before I discovered the Quntom dot CA. Now I'm certain this is the right path for the 21st century chip. 
+
+The speed of the design is not that important - what's more important is usability and programmability. 
+
+The programming studio for this chip will mainly be [CA Studio](https://github.com/simsim314/CA-Studio). 

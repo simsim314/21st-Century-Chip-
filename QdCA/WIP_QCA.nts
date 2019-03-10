@@ -1,0 +1,160 @@
+@NUTSHELL QdCA
+
+#0 - empty space 
+#switch - 0,1,unk,A1,A0 : 1, 2, 3, 4, 5
+#hold - 0,1,unk,A1,A0 : 6, 7, 8, 9, 10
+#relese - r, A1, A0 : 11, 12, 13
+#relax - r, A1, A0 : 14, 15, 16
+
+@TABLE
+states: 17
+symmetries: rotate4 reflect
+
+neighborhood: Moore
+
+#variables 
+
+switch = (1, 2, 3, 4, 5)
+hold = (6, 7, 8, 9, 10)
+relese = (11, 12, 13)
+relax = (14, 15, 16)
+switch_hold = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+not_switch_hold = (11, 12, 13, 14, 15, 16)
+undefined_relax = (16)
+defined_relax = (14, 15)
+
+#General rules 
+
+1, any, any, any, any, any, any, any, any; 6
+2, any, any, any, any, any, any, any, any; 7
+3, any, any, any, any, any, any, any, any; 8
+4, any, any, any, any, any, any, any, any; 9
+5, any, any, any, any, any, any, any, any; 10
+6, any, any, any, any, any, any, any, any; 11
+7, any, any, any, any, any, any, any, any; 11
+8, any, any, any, any, any, any, any, any; 11
+9, any, any, any, any, any, any, any, any; 12
+10, any, any, any, any, any, any, any, any; 13
+11, any, any, any, any, any, any, any, any; 14
+12, any, any, any, any, any, any, any, any; 15
+13, any, any, any, any, any, any, any, any; 16
+14, any, any, any, any, any, any, any, any; 4
+15, any, any, any, any, any, any, any, any; 5
+
+#wire rules 
+
+undefined_relax, 0, 0, not_switch_hold, 0, 0, 0, 1, 0; 1
+undefined_relax, 0, 0, not_switch_hold, 0, 0, 0, 2, 0; 2
+undefined_relax, 0, 0, not_switch_hold, 0, 0, 0, 3, 0; 3
+undefined_relax, 0, 0, not_switch_hold, 0, 0, 0, 4, 0; 4
+undefined_relax, 0, 0, not_switch_hold, 0, 0, 0, 5, 0; 5
+undefined_relax, 0, 0, not_switch_hold, 0, 0, 0, 6, 0; 1
+undefined_relax, 0, 0, not_switch_hold, 0, 0, 0, 7, 0; 2
+undefined_relax, 0, 0, not_switch_hold, 0, 0, 0, 8, 0; 3
+undefined_relax, 0, 0, not_switch_hold, 0, 0, 0, 9, 0; 4
+undefined_relax, 0, 0, not_switch_hold, 0, 0, 0, 10, 0; 5
+undefined_relax, 0, 0, 1, 0, 0, 0, 1, 0; 2
+undefined_relax, 0, 0, 2, 0, 0, 0, 1, 0; 3
+undefined_relax, 0, 0, 3, 0, 0, 0, 1, 0; 3
+undefined_relax, 0, 0, 4, 0, 0, 0, 1, 0; 2
+undefined_relax, 0, 0, 5, 0, 0, 0, 1, 0; 3
+undefined_relax, 0, 0, 6, 0, 0, 0, 1, 0; 2
+undefined_relax, 0, 0, 7, 0, 0, 0, 1, 0; 3
+undefined_relax, 0, 0, 8, 0, 0, 0, 1, 0; 3
+undefined_relax, 0, 0, 9, 0, 0, 0, 1, 0; 2
+undefined_relax, 0, 0, 10, 0, 0, 0, 1, 0; 3
+undefined_relax, 0, 0, 1, 0, 0, 0, 2, 0; 3
+undefined_relax, 0, 0, 2, 0, 0, 0, 2, 0; 3
+undefined_relax, 0, 0, 3, 0, 0, 0, 2, 0; 3
+undefined_relax, 0, 0, 4, 0, 0, 0, 2, 0; 3
+undefined_relax, 0, 0, 5, 0, 0, 0, 2, 0; 3
+undefined_relax, 0, 0, 6, 0, 0, 0, 2, 0; 3
+undefined_relax, 0, 0, 7, 0, 0, 0, 2, 0; 3
+undefined_relax, 0, 0, 8, 0, 0, 0, 2, 0; 3
+undefined_relax, 0, 0, 9, 0, 0, 0, 2, 0; 3
+undefined_relax, 0, 0, 10, 0, 0, 0, 2, 0; 3
+undefined_relax, 0, 0, 1, 0, 0, 0, 3, 0; 3
+undefined_relax, 0, 0, 2, 0, 0, 0, 3, 0; 3
+undefined_relax, 0, 0, 3, 0, 0, 0, 3, 0; 1
+undefined_relax, 0, 0, 4, 0, 0, 0, 3, 0; 3
+undefined_relax, 0, 0, 5, 0, 0, 0, 3, 0; 1
+undefined_relax, 0, 0, 6, 0, 0, 0, 3, 0; 3
+undefined_relax, 0, 0, 7, 0, 0, 0, 3, 0; 3
+undefined_relax, 0, 0, 8, 0, 0, 0, 3, 0; 1
+undefined_relax, 0, 0, 9, 0, 0, 0, 3, 0; 3
+undefined_relax, 0, 0, 10, 0, 0, 0, 3, 0; 1
+undefined_relax, 0, 0, 1, 0, 0, 0, 4, 0; 2
+undefined_relax, 0, 0, 2, 0, 0, 0, 4, 0; 3
+undefined_relax, 0, 0, 3, 0, 0, 0, 4, 0; 3
+undefined_relax, 0, 0, 4, 0, 0, 0, 4, 0; 2
+undefined_relax, 0, 0, 5, 0, 0, 0, 4, 0; 3
+undefined_relax, 0, 0, 6, 0, 0, 0, 4, 0; 2
+undefined_relax, 0, 0, 7, 0, 0, 0, 4, 0; 3
+undefined_relax, 0, 0, 8, 0, 0, 0, 4, 0; 3
+undefined_relax, 0, 0, 9, 0, 0, 0, 4, 0; 2
+undefined_relax, 0, 0, 10, 0, 0, 0, 4, 0; 3
+undefined_relax, 0, 0, 1, 0, 0, 0, 5, 0; 3
+undefined_relax, 0, 0, 2, 0, 0, 0, 5, 0; 3
+undefined_relax, 0, 0, 3, 0, 0, 0, 5, 0; 1
+undefined_relax, 0, 0, 4, 0, 0, 0, 5, 0; 3
+undefined_relax, 0, 0, 5, 0, 0, 0, 5, 0; 1
+undefined_relax, 0, 0, 6, 0, 0, 0, 5, 0; 3
+undefined_relax, 0, 0, 7, 0, 0, 0, 5, 0; 3
+undefined_relax, 0, 0, 8, 0, 0, 0, 5, 0; 1
+undefined_relax, 0, 0, 9, 0, 0, 0, 5, 0; 3
+undefined_relax, 0, 0, 10, 0, 0, 0, 5, 0; 1
+undefined_relax, 0, 0, 1, 0, 0, 0, 6, 0; 2
+undefined_relax, 0, 0, 2, 0, 0, 0, 6, 0; 3
+undefined_relax, 0, 0, 3, 0, 0, 0, 6, 0; 3
+undefined_relax, 0, 0, 4, 0, 0, 0, 6, 0; 2
+undefined_relax, 0, 0, 5, 0, 0, 0, 6, 0; 3
+undefined_relax, 0, 0, 6, 0, 0, 0, 6, 0; 2
+undefined_relax, 0, 0, 7, 0, 0, 0, 6, 0; 3
+undefined_relax, 0, 0, 8, 0, 0, 0, 6, 0; 3
+undefined_relax, 0, 0, 9, 0, 0, 0, 6, 0; 2
+undefined_relax, 0, 0, 10, 0, 0, 0, 6, 0; 3
+undefined_relax, 0, 0, 1, 0, 0, 0, 7, 0; 3
+undefined_relax, 0, 0, 2, 0, 0, 0, 7, 0; 3
+undefined_relax, 0, 0, 3, 0, 0, 0, 7, 0; 3
+undefined_relax, 0, 0, 4, 0, 0, 0, 7, 0; 3
+undefined_relax, 0, 0, 5, 0, 0, 0, 7, 0; 3
+undefined_relax, 0, 0, 6, 0, 0, 0, 7, 0; 3
+undefined_relax, 0, 0, 7, 0, 0, 0, 7, 0; 3
+undefined_relax, 0, 0, 8, 0, 0, 0, 7, 0; 3
+undefined_relax, 0, 0, 9, 0, 0, 0, 7, 0; 3
+undefined_relax, 0, 0, 10, 0, 0, 0, 7, 0; 3
+undefined_relax, 0, 0, 1, 0, 0, 0, 8, 0; 3
+undefined_relax, 0, 0, 2, 0, 0, 0, 8, 0; 3
+undefined_relax, 0, 0, 3, 0, 0, 0, 8, 0; 1
+undefined_relax, 0, 0, 4, 0, 0, 0, 8, 0; 3
+undefined_relax, 0, 0, 5, 0, 0, 0, 8, 0; 1
+undefined_relax, 0, 0, 6, 0, 0, 0, 8, 0; 3
+undefined_relax, 0, 0, 7, 0, 0, 0, 8, 0; 3
+undefined_relax, 0, 0, 8, 0, 0, 0, 8, 0; 1
+undefined_relax, 0, 0, 9, 0, 0, 0, 8, 0; 3
+undefined_relax, 0, 0, 10, 0, 0, 0, 8, 0; 1
+undefined_relax, 0, 0, 1, 0, 0, 0, 9, 0; 2
+undefined_relax, 0, 0, 2, 0, 0, 0, 9, 0; 3
+undefined_relax, 0, 0, 3, 0, 0, 0, 9, 0; 3
+undefined_relax, 0, 0, 4, 0, 0, 0, 9, 0; 2
+undefined_relax, 0, 0, 5, 0, 0, 0, 9, 0; 3
+undefined_relax, 0, 0, 6, 0, 0, 0, 9, 0; 2
+undefined_relax, 0, 0, 7, 0, 0, 0, 9, 0; 3
+undefined_relax, 0, 0, 8, 0, 0, 0, 9, 0; 3
+undefined_relax, 0, 0, 9, 0, 0, 0, 9, 0; 2
+undefined_relax, 0, 0, 10, 0, 0, 0, 9, 0; 3
+undefined_relax, 0, 0, 1, 0, 0, 0, 10, 0; 3
+undefined_relax, 0, 0, 2, 0, 0, 0, 10, 0; 3
+undefined_relax, 0, 0, 3, 0, 0, 0, 10, 0; 1
+undefined_relax, 0, 0, 4, 0, 0, 0, 10, 0; 3
+undefined_relax, 0, 0, 5, 0, 0, 0, 10, 0; 1
+undefined_relax, 0, 0, 6, 0, 0, 0, 10, 0; 3
+undefined_relax, 0, 0, 7, 0, 0, 0, 10, 0; 3
+undefined_relax, 0, 0, 8, 0, 0, 0, 10, 0; 1
+undefined_relax, 0, 0, 9, 0, 0, 0, 10, 0; 3
+undefined_relax, 0, 0, 10, 0, 0, 0, 10, 0; 1
+
+#negate rules 
+
+#majority rules 
+
